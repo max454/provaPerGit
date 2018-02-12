@@ -11,6 +11,8 @@ typedef struct car_s{
 float terzo(float);
 
 int somma4(int);
+int somma10(int);
+
 
 int main(int argc, char * argv[]) {
     float n, ris;
@@ -23,6 +25,7 @@ int main(int argc, char * argv[]) {
     
     printf("Ecco qua: %f\n", ris);
     printf("%d\n", somma4(n));
+    printf("%d\n", somma10(n));
     
     return 0;
 }
@@ -39,6 +42,18 @@ int somma4(int n){
     
     ris=n;
     for(i=0; i<4;i++)
+        ris++;
+    
+    
+    return ris;
+
+}
+
+int somma10(int n){
+    int i, ris;
+    
+    ris=n;
+    for(i=0; i<10;i++)
         ris++;
     
     
