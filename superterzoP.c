@@ -38,15 +38,7 @@ float terzo(float n){
 }
 
 int somma4(int n){
-    int i, ris;
-    
-    ris=n;
-    for(i=0; i<4;i++)
-        ris++;
-    
-    
-    return ris;
-
+    return n+4;
 }
 
 int somma10(int n){
