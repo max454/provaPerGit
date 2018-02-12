@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MIN 3
+#define MIN 1
 
 typedef struct car_s{
     int nruote;
