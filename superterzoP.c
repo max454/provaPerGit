@@ -23,7 +23,7 @@ int main(int argc, char * argv[]) {
     
     ris=terzo(n);
     
-    printf("Ecco qua: %f\n", ris);
+    printf("Ciao! Ecco qua: %f\n", ris);
     printf("%d\n", somma4(n));
     printf("%d\n", somma10(n));
     
