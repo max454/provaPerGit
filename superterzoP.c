@@ -42,13 +42,5 @@ int somma4(int n){
 }
 
 int somma10(int n){
-    int i, ris;
-    
-    ris=n;
-    for(i=0; i<10;i++)
-        ris++;
-    
-    
-    return ris;
-
+    return n+10;
 }
