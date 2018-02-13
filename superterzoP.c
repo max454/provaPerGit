@@ -47,7 +47,7 @@ int somma10(int n){
 
 int somma20(int n) {
     int i, ris;
-    printf("Creando un conflitto\n");
+    
     ris=n;
     for(i=0; i<20;i++)
         ris++;
