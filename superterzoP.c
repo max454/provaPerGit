@@ -44,3 +44,14 @@ int somma4(int n){
 int somma10(int n){
     return n+10;
 }
+
+int somma20(int n) {
+    int i, ris;
+    
+    ris=n;
+    for(i=0; i<20;i++)
+        ris++;
+    
+    
+    return ris;
+}
