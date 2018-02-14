@@ -1,57 +1,70 @@
 #include <stdio.h>
 
 #define MIN 1
+#define A 2
+#define B 4
+#define C 6
 
-typedef struct car_s{
-    int nruote;
-    int potenza;
-    
-}car_t;
+typedef struct ogg_s{
+    float f;
+    int a;
+    int b;
+    int c;
+}ogg_t;
 
 float terzo(float);
-
-int somma4(int);
-int somma10(int);
+int sommaeFatt(int, int);
+int fattoriale(int);
 
 
 int main(int argc, char * argv[]) {
-    float n, ris;
+    ogg_t numeri;
+    float f;
+    int n;
     
     do
-        scanf("%f", &n);
-    while(n<MIN);
+        scanf("%f", &f);
+    while(f<MIN);
     
-    ris=terzo(n);
+    numeri.f=terzo(f);
     
-    printf("Hello! Ecco qua: %f\n", ris);
-    printf("%d\n", somma4(n));
-    printf("%d\n", somma10(n));
+    scanf("%d", &n);
+    
+    numeri.a=sommaeFatt(n,A);
+    numeri.b=sommaeFatt(n,B);
+    numeri.c=sommaeFatt(n,C);
+    
+    printf("Hello! Ecco qua, f: %f, a: %d, b: %d, c: %d\n", numeri.f, numeri.a, numeri.b, numeri.c);
     
     return 0;
 }
 
-float terzo(float n){
+float terzo(float n) {
     if(n<1)
         return n;
     
     return terzo(n/3);
 }
 
-int somma4(int n){
-    return n+4;
+int sommaeFatt(int n, int agg) {
+    return fattoriale(n+agg);
 }
 
-int somma10(int n){
-    return n+10;
-}
-
-int somma20(int n) {
-    int i, ris;
+int fattoriale(int n) {
+    int temp;
     
-    ris=n;
-    for(i=0; i<20;i++)
-        ris++;
+    if(n<0)
+        return -1;
     
+    if(n<2)
+        return 1;
     
-    return ris;
+    temp=n-1;
+    
+    while(temp>1) {
+        n=n*temp;
+        temp--;
+    }
+    
+    return n;
 }
