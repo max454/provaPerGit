@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 #define MIN 1
-#define A 3
-#define B 10
-#define C 20
+#define A 2
+#define B 4
+#define C 6
 
 typedef struct ogg_s{
-    int f;
+    float f;
     int a;
     int b;
     int c;
@@ -34,7 +34,7 @@ int main(int argc, char * argv[]) {
     numeri.b=sommaeFatt(n,B);
     numeri.c=sommaeFatt(n,C);
     
-    printf("Hello! Ecco qua, f: %f, a: %d, b: %d, c: %d \n", numeri.f, numeri.a, numeri.b, numeri.c);
+    printf("Hello! Ecco qua, f: %f, a: %d, b: %d, c: %d\n", numeri.f, numeri.a, numeri.b, numeri.c);
     
     return 0;
 }
